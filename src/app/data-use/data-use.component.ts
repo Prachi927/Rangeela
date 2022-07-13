@@ -21,6 +21,7 @@ export class DataUseComponent implements OnInit {
   }
   
   clearFormData(){
+    this.id = "";
     this.name = "";
     this.avatar = "";
   }
@@ -32,8 +33,7 @@ export class DataUseComponent implements OnInit {
    }
 
    SendFormData(){
-      let fData:any = {'name':this.name,'avatar':this.avatar};
-      
+      let fData:any = {'name':this.name,'avatar':this.avatar};      
       this._http.post(this.myUrl,fData).subscribe((pRes)=>{        
         console.log(pRes);
         this.getData();
@@ -42,31 +42,26 @@ export class DataUseComponent implements OnInit {
     }
    
     editData(data:any){
-      console.log(data);
       this.updateData = true;
       this.id = data.id;
       this.name = data.name;
       this.avatar = data.avatar;
-      // let fData:any = {'name':this.name,'avatar':this.avatar};
-
-      // this._http.put(this.myUrl+"/"+this.id,fData).subscribe((pRes)=>{        
-      //   console.log(pRes);
-      //   this.getData();
-      //   this.clearFormData();
-      // }); 
     }
 
-    modifyData(){
-     
-      this.updateData = false;
-     
+    modifyData(){     
+      this.updateData = false;     
       let fData:any = {'name':this.name,'avatar':this.avatar};
-
       this._http.put(this.myUrl+"/"+this.id,fData).subscribe((pRes)=>{        
         console.log(pRes);
         this.getData();
         this.clearFormData();
       }); 
+    }
+    
+    cancelData(){
+      this.updateData = false; 
+      this.getData();
+      this.clearFormData();
     }
 
     deleteData(data:any){

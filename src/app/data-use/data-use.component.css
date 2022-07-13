@@ -28,8 +28,16 @@ th {
     color: navy;
 }
 
-.myStyle button {
+.btnStyle1 {
     width: 200px;
+}
+
+.btnStyle2 button {
+    width: 90px;
+    margin: 0px 10px;
+    border: none;
+    background-color: navy;
+    color: rgb(199, 241, 227);
 }
 
 button {

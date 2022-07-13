@@ -20,7 +20,7 @@ import { RoutingAss5Component } from './routing-ass5/routing-ass5.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { DataUseComponent } from './data-use/data-use.component';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -47,6 +47,7 @@ import { DataUseComponent } from './data-use/data-use.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

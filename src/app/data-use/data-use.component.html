@@ -26,8 +26,11 @@
                 <th><input type="text" name="name" [(ngModel)]="name" required ngModel /></th>
                 <th><input type="text" name="avatar" [(ngModel)]="avatar" required ngModel /></th>                
                 <th>
-                    <button *ngIf="updateData == false" (click)="SendFormData()">Add</button>
-                    <button *ngIf="updateData == true" (click)="modifyData()">Update</button>
+                    <button *ngIf="updateData == false" class="btnStyle1" (click)="SendFormData()">Add</button>
+                    <div *ngIf="updateData == true" class="btnStyle2">
+                        <button (click)="modifyData()">Update</button>
+                        <button (click)="cancelData()">Cancel</button>
+                    </div>                    
                 </th>
             </tr>
             <tr *ngFor="let post of posts">
