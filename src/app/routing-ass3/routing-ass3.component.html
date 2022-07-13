@@ -1,0 +1,17 @@
+<p>routing-ass3 works!</p>
+<div class="container-fluid">
+    <div class="container">
+        <button type="submit" (click)="userData()">Get Data</button>
+        <br><br>
+        <table [ngStyle]="{'background-color':test}">
+            <tr>
+                <th>Name</th>
+                <th>Job Title</th>
+            </tr>
+            <tr *ngFor="let user of users">
+                <td>{{user.name}}</td>
+                <td>{{user.jobTitle}}</td>
+            </tr>
+        </table>        
+    </div>
+</div>

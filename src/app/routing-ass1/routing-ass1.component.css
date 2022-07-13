@@ -1,0 +1,19 @@
+.show1 {
+    background-color: rgb(73, 174, 233);
+    color: rgb(27, 90, 85);
+}
+
+.show2 {
+    background-color: rgb(64, 192, 164);
+    color: blue;
+}
+
+.myStyle {
+    display: flex;
+    margin-top: 10px;
+}
+
+.myStyle div {    
+    width: 300px;
+    margin-right: 10px;
+}

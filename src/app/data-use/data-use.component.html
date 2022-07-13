@@ -1,0 +1,42 @@
+<p>data-use works!</p>
+<div class="container-fluid">
+    <div class="container">
+        <!-- <form #myFormData="ngForm" (ngSubmit)="SendFormData(myFormData.value)">
+            <label>Id</label>
+            <input type="text" name="id" required ngModel />
+            <label>Name</label>
+            <input type="text" name="name" required ngModel />
+            <label>Avatar</label>
+            <input type="text" name="avatar" required ngModel />
+            <br><br>
+            <button [disabled]="myFormData.invalid">Add</button>
+        </form> -->
+
+        <!-- <form #myFormData="ngForm" (ngSubmit)="SendFormData(myFormData.value)"> -->
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Avatar</th>
+                <th>Action</th>
+            </tr>
+            <tr class="myStyle">
+                <!-- <th>{{posts.length+1}}</th> -->
+                <th><input type="number" name="id" [(ngModel)]="id" required ngModel /></th>
+                <th><input type="text" name="name" [(ngModel)]="name" required ngModel /></th>
+                <th><input type="text" name="avatar" [(ngModel)]="avatar" required ngModel /></th>                
+                <th>
+                    <button *ngIf="updateData == false" (click)="SendFormData()">Add</button>
+                    <button *ngIf="updateData == true" (click)="modifyData()">Update</button>
+                </th>
+            </tr>
+            <tr *ngFor="let post of posts">
+                <td>{{post.id}}</td>
+                <td>{{post.name}}</td>
+                <td>{{post.avatar}}</td>
+                <td><button (click)="editData(post)">Edit</button><button (click)="deleteData(post)">Delete</button></td>
+            </tr>
+        </table>
+        <!-- </form> -->
+    </div>
+</div>

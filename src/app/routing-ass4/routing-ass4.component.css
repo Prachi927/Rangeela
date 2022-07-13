@@ -1,0 +1,29 @@
+ul {
+    background-color: rgb(11, 80, 63);
+    color: aquamarine;        
+}
+
+li {
+    display: inline-block;
+    padding-right: 50px;
+    padding-top: 10px;
+    list-style-type: none;
+    cursor: pointer;
+    height: 50px;    
+}
+
+.Friends {
+    color: green;
+}
+
+.Others {
+    color: red;
+}
+
+.myStyle {
+    margin:0px 20px;
+}
+
+.pb-3 {
+    margin-left: 30px;
+}

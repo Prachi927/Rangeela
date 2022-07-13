@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <div class="container">
+        <h2>Please Register your Account</h2>
+        <form #myFormSignIn="ngForm" (ngSubmit)="SentFormData(myFormSignIn.value)">
+            <div class="mb-3 mt-3">
+                <label for="Name" class="form-label">UserName:</label>
+                <input type="text" class="form-control" placeholder="Enter UserName" name="uName" #uName="ngModel" minlength="3" maxlength="10" required ngModel />
+                <span *ngIf="uName.pristine">Please fill out this field.</span>
+                <span *ngIf="uName.invalid && uName.dirty">The maxlength for name is 5 letters.</span>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="Email" class="form-label">Email:</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Email" name="nEmail" #nEmail="ngModel" required ngModel >
+                    <span class="input-group-text">@gmail.com</span>
+                </div>                
+                <span *ngIf="nEmail.pristine">Please fill out this field.</span>
+                <span *ngIf="nEmail.invalid && nEmail.dirty">Please fill out this field.</span>
+            </div>
+            <div class="mb-3">
+                <label for="Pwd" class="form-label">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter Password" name="nPwd" #nPwd="ngModel" minlength="6" required ngModel />
+                <span *ngIf="nPwd.pristine">Please fill out this field.</span>
+                <span *ngIf="nPwd.invalid && nPwd.dirty">Please fill out this field.</span>
+            </div>
+            <div>
+                <label for="Birthdate">Birthdate:&nbsp;</label>
+                <input type="date" id="Birthdate" name="Birthdate">
+            </div>
+            <div>
+                <label for="Gender" class="form-label">Gender:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Male" checked>Male
+                    <!-- <label class="form-check-label" for="radio1"></label> -->
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Female">Female
+                    <!-- <label class="form-check-label" for="radio2"></label> -->
+                </div>
+            </div>
+            <div>
+                <label for="Hobbies" class="form-label">Hobbies:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="Music">Music
+                    <!-- <label class="form-check-label"></label> -->
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check2" name="option2" value="Dance">Dance
+                    <!-- <label class="form-check-label"></label> -->
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check3" name="option3" value="Painting">Painting
+                    <!-- <label class="form-check-label"></label> -->
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="check4" name="option4" value="Sketching">Sketching
+                    <!-- <label class="form-check-label"></label> -->
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-lg-1 mt-3">
+                    <button type="submit" class="btn btn-primary" [disabled]="myFormSignIn.invalid">Submit</button>
+                </div>
+                <div class="col-lg-1 mt-3">
+                    <a routerLinkActive="active" class="btn btn-success" href="routing-signin">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

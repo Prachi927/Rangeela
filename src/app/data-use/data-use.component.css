@@ -1,0 +1,48 @@
+form {
+    margin-bottom: 20px;
+}
+
+table {
+    margin-bottom: 90px;
+    table-layout: auto;
+    width: 100%;
+}
+
+td {
+    border: 1px solid white;
+    background-color: rgb(199, 241, 227);
+    color: navy;    
+    padding: 5px;
+    padding-left: 10px;
+}
+
+th {
+    background-color: navy;
+    color: rgb(199, 241, 227);
+    padding: 10px;    
+}
+
+.myStyle th {    
+    border: 1px solid white;
+    background-color: rgb(123, 209, 243);
+    color: navy;
+}
+
+.myStyle button {
+    width: 200px;
+}
+
+button {
+    width: 90px;
+    margin: 0px 10px;
+    border: none;
+    background-color: navy;
+    color: rgb(199, 241, 227);
+}
+
+input {
+    border: none;
+    width:100%;
+    font-weight: bold;
+    color: navy;
+}

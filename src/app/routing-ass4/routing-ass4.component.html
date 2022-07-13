@@ -1,0 +1,27 @@
+<p class="text-center mt-3">routing-ass4 works!</p>
+<div class="myStyle" [ngStyle]="{'background-color':test}">
+    <ul>
+        <li (click)="selectedTab='Tab1'">Tab 1</li>
+        <li (click)="selectedTab='Tab2'">Tab 2</li>
+        <li (click)="selectedTab='Tab3'">Tab 3</li>        
+    </ul>
+
+    <div [ngSwitch]="selectedTab">
+        <div *ngSwitchCase="'Tab1'">
+            <div *ngFor="let student of students">
+                <div class="pb-3" [ngClass]="getStudents(student)">{{student}}</div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'Tab2'">
+            <div *ngFor="let student of students; let indexOfstudent=index;">
+                <div class="pb-3" *ngIf="indexOfstudent<4" [ngClass]="'Friends'">{{student}}</div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'Tab3'">
+            <div *ngFor="let student of students; let indexOfstudent=index;">
+                <div class="pb-3" *ngIf="indexOfstudent>3" [ngClass]="'Others'">{{student}}</div>
+            </div>
+        </div>
+        <div class="pb-3" *ngSwitchDefault>Default Page</div>
+    </div>
+</div>

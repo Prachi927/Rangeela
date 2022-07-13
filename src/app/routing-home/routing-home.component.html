@@ -1,0 +1,8 @@
+<p>Welcome to Home Page</p>
+<h1>Please check the magic</h1>
+<input type="text" [(ngModel)]="uInput" />
+<button (click)="addList()"> Add </button> 
+<br><br>
+<ul>
+  <li *ngFor="let name of names"> {{name}} -- <button (click)="removeItem(name)">Remove</button></li>
+</ul>

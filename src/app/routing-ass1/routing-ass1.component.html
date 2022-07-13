@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <p>This is Angular Assignment 1</p><br>
+    <input type="text" placeholder="Enter Item" [(ngModel)]="uName"/>
+    <input type="number" placeholder="Enter Item" [(ngModel)]="uCart"/>
+    <button (click)="addItem(uName,uCart)"> Add </button>
+    <br><br>
+    <div class="myStyle">
+        <div class="show1">  
+            <h4>Cart - 1</h4>
+            <h6 *ngFor="let item of showArr1">{{item}} -- <button (click)="removeItem1(item)">Remove</button></h6>
+        </div>
+        <div class="show2">
+            <h4>Cart - 2</h4>
+            <h6 *ngFor="let item of showArr2">{{item}} -- <button (click)="removeItem2(item)">Remove</button></h6>
+        </div>        
+    </div>    
+</div>
+
+
